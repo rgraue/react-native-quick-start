@@ -4,7 +4,7 @@
  *
  * @format
  */
-
+import {todoContext} from '@store/context';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
@@ -77,8 +77,11 @@ function App(): JSX.Element {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
-            Edit me pls <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+            Edit me pls{' '}
+            <Text style={styles.highlight}>
+              App.tsx {todoContext.toString()}{' '}
+            </Text>{' '}
+            to change this screen and then come back to see your edits.
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
