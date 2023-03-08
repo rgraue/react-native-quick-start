@@ -1,6 +1,6 @@
 import {todoContext} from '@store';
 
-describe('test test lol', () => {
+describe('test test', () => {
   test('todoContext', () => {
     expect(todoContext).toBe('ADD CONTEXT');
   });
