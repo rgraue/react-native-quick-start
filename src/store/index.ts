@@ -1,11 +1,10 @@
 import {configureStore} from '@reduxjs/toolkit';
+import {todoSlice} from './todo.slice';
 
-// export all from context and slice index file
-export * from './context';
-export * from './slices';
-
-// Note create and import slices to add to reduce.
+export * from './todo.slice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    todos: todoSlice.reducer,
+  },
 });

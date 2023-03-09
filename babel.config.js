@@ -1,5 +1,8 @@
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
+  presets: [
+    'module:metro-react-native-babel-preset',
+    '@babel/preset-typescript',
+  ],
   plugins: [
     [
       'babel-plugin-module-resolver',
@@ -8,8 +11,8 @@ module.exports = {
           '@appRealm': ([, name]) => {
             return './src/appRealm/';
           },
-          '@styles': ([, name]) => {
-            return './src/styles/';
+          '@theme': ([, name]) => {
+            return './src/theme/';
           },
           '@components': ([, name]) => {
             return './src/components/';
@@ -31,6 +34,9 @@ module.exports = {
           },
           '@store': ([, name]) => {
             return './src/store/';
+          },
+          '@navigation': ([, name]) => {
+            return './src/navigation/';
           },
         },
       },

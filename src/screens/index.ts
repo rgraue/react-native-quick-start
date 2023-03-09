@@ -1,3 +1,2 @@
-// export * from ...
-
-export const todo = 'ADD SCREENS';
+export * from './home.screen';
+export * from './todo.screen';

@@ -1,3 +1,3 @@
-// export * from ...
-
-export const todo = 'ADD COMPONENTS';
+export * from './myButton.component';
+export * from './todoForm.component';
+export * from './todoList.component';

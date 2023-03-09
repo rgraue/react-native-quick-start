@@ -1,3 +1,0 @@
-// export * from ...
-
-export const todoSlice = 'ADD SLICES';

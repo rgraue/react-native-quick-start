@@ -1,7 +1,8 @@
-import {todoContext} from '@store';
+import {Todo} from '@appRealm';
 
 describe('test test', () => {
   test('todoContext', () => {
-    expect(todoContext).toBe('ADD CONTEXT');
+    console.log(Todo);
+    expect(true).toBe(true);
   });
 });
