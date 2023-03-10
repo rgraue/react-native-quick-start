@@ -9,7 +9,12 @@ export const TodoScreen = ({ navigation }) => {
   }
   return (
     <Layout style={style.container}>
-      <Text>TODO List</Text>
+      <Text category="h1">TODO List</Text>
+      <Text>
+        Realm provides persistent data storage, while redux loses its state
+        after shutdown. The star icon depicts what items are both in realm and
+        redux.
+      </Text>
       <TodoForm />
       <TodoList />
       <MyButton text={'Go Back'} buttonHandler={switchPage} />

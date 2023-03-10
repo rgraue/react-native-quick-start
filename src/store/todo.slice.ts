@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-interface TodoSliceObject {
+export interface TodoSliceObject {
   id: string;
   name: string;
 }
@@ -12,7 +12,6 @@ export const todoSlice = createSlice({
   },
   reducers: {
     addTodo: (state, action) => {
-      console.log('addtodo', action);
       state.todos.push(action.payload);
     },
     removeTodo: (state, action) => {
