@@ -1,5 +1,5 @@
-import {createRealmContext} from '@realm/react';
-import {Todo} from './todo';
+import { createRealmContext } from '@realm/react';
+import { Todo } from './todo';
 
 export * from './todo';
 

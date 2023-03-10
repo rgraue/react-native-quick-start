@@ -1,4 +1,4 @@
-import {Todo} from '@appRealm';
+import { Todo } from '@appRealm';
 
 describe('test test', () => {
   test('todoContext', () => {

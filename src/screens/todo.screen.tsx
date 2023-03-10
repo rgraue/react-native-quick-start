@@ -1,8 +1,9 @@
-import {Layout, Text} from '@ui-kitten/components';
-import {MyButton, TodoForm, TodoList} from '@components';
-import {StyleSheet} from 'react-native';
+import React from 'react';
+import { Layout, Text } from '@ui-kitten/components';
+import { MyButton, TodoForm, TodoList } from '@components';
+import { StyleSheet } from 'react-native';
 
-export const TodoScreen = ({navigation}) => {
+export const TodoScreen = ({ navigation }) => {
   function switchPage() {
     navigation.navigate('Home');
   }

@@ -1,4 +1,4 @@
-import {Realm} from '@realm/react';
+import { Realm } from '@realm/react';
 
 export class Todo extends Realm.Object<Todo> {
   _id!: Realm.BSON.ObjectId;

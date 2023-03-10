@@ -1,12 +1,13 @@
-import {Input, Layout} from '@ui-kitten/components';
-import {useSelector, useDispatch} from 'react-redux';
-import {addTodo} from '@store';
-import {MyButton} from './myButton.component';
-import {useState} from 'react';
-import {TodoRealmContext, Todo} from '@appRealm';
+import React from 'react';
+import { Input, Layout } from '@ui-kitten/components';
+import { useSelector, useDispatch } from 'react-redux';
+import { addTodo } from '@store';
+import { MyButton } from './myButton.component';
+import { useState } from 'react';
+import { TodoRealmContext, Todo } from '@appRealm';
 import Realm from 'realm';
 
-const {useRealm} = TodoRealmContext;
+const { useRealm } = TodoRealmContext;
 
 export const TodoForm = () => {
   const [todoName, setTodoName] = useState('');

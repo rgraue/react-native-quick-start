@@ -1,8 +1,9 @@
-import {List, ListItem, Layout} from '@ui-kitten/components';
-import {TodoRealmContext, Todo} from '@appRealm';
-import {StyleSheet} from 'react-native';
+import React from 'react';
+import { List, ListItem, Layout } from '@ui-kitten/components';
+import { TodoRealmContext, Todo } from '@appRealm';
+import { StyleSheet } from 'react-native';
 
-const {useQuery} = TodoRealmContext;
+const { useQuery } = TodoRealmContext;
 
 export const TodoList = () => {
   const data = useQuery(Todo);
@@ -13,7 +14,7 @@ export const TodoList = () => {
       <List
         style={style.item}
         data={[...data]}
-        renderItem={({item}) => (
+        renderItem={({ item }) => (
           <ListItem title={`${item.name}, ${item._id}`} />
         )}
       />

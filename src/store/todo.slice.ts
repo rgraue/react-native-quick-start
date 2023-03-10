@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 interface TodoSliceObject {
   id: string;
@@ -21,4 +21,4 @@ export const todoSlice = createSlice({
   },
 });
 
-export const {addTodo, removeTodo} = todoSlice.actions;
+export const { addTodo, removeTodo } = todoSlice.actions;
