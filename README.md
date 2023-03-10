@@ -12,4 +12,8 @@ please use `Node 18` [nvm](https://github.com/nvm-sh/nvm)
 - jest for all the testing
 - @react-navigation/native for navigation
 
+## Debugging
+
+Includied are 2 scripts `build:ios` and `build:android`. These should come in handy when needing to build the respective deployments from scratch with all dependcies. ie. cocoa pods and respective android SDK via gradle
+
 > Does not use expo!!!
