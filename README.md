@@ -1,6 +1,18 @@
 # react-native-quick-start
 
-_if MacOS 13 and npm 9, please use `Node 18` [nvm](https://github.com/nvm-sh/nvm) do to [realm issues](https://github.com/realm/realm-js/issues/5136) :/_
+_if macOS 13 and npm 9, please use `Node 18` [nvm](https://github.com/nvm-sh/nvm) do to [realm issues](https://github.com/realm/realm-js/issues/5136) :/_
+
+## Running
+
+_If first time running app, run `npm run build:ios/android` to initally install and build dependencies._
+
+### ios
+
+`npm run start` opens emulator, installs and opens app automatically.
+
+### Android
+
+Open desired android emulator and device and enter `npm run android`. This will begin installation and opening of app.
 
 ## Included packages
 
@@ -10,23 +22,38 @@ _if MacOS 13 and npm 9, please use `Node 18` [nvm](https://github.com/nvm-sh/nvm
 - jest for all the testing
 - @react-navigation/native for navigation
 
-## Emulators
+## Prerequisites
 
-The [offical setup guide](https://reactnative.dev/docs/environment-setup) does a decent job for setting up the development environment. Below are some more specifics that you may run into.
+_machine used for setup was an Intel macOS 13._
 
 ### ios
 
-Be sure to install Xcode. Xcode will automatially download the latest iphone emulator. The build process requires `xcodebuild`, if not already installed, run `xcode-select install`. Xcode also makes it easy to locally develop and debug the `ios/` workspace.
+1. [xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+   - xcode builds via the `xcodebuild` command. If command is not found, run `xcode-select --install` to install xcode-cli.
+2. [rbenv](https://github.com/rbenv/rbenv) for managing ruby versions. React-native's default target is `2.7.6`
+   - rbenv requires additions to `PATH` for `rbenv global [VERSION]` to take affect. If necessary add these two lines to the cli profile in use and restart. i.e. `.zshrc` or `.bash_profile`.
+     > `export PATH="$HOME/.rbenv/bin:$PATH"`\
+     > `eval "$(rbenv init -)"`
+3. [cocoapods](https://cocoapods.org/)
+   - Use `brew install cocoapods` to install if not already.
+   - cocoapods are used to manage dependcies and packages imported by react-native. pods can be built either by changing directory to `ios/` and running `pod install` or using the `build:ios` script.
 
-### android
+### Android
 
-Android has many emulators to select from, but [android studio](https://developer.android.com/studio?gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPI0glwG6Gh40hC0EgwaANvivEIBEnZLDJKRgO8DK_UKXZutyj-v2iIaAjLKEALw_wcB&gclsrc=aw.ds) easily runs emulators and gives more insight to the `android/` workspace.
+1. [Android Studio](https://developer.android.com/studio?gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPI0glwG6Gh40hC0EgwaANvivEIBEnZLDJKRgO8DK_UKXZutyj-v2iIaAjLKEALw_wcB&gclsrc=aw.ds)
+   - emulators and devices can also be deployed with the **Device Manager** of Android Studio.
+2. [JDK](https://www.oracle.com/java/technologies/downloads/)
+   - A java development source is required to build for android.
+3. [Gradle](https://gradle.org/)
+   - If using adnroid studio **Gradle plugin will be installed automatically**. Gradle is used to build the source code for android. This can be done manually from within android studio, `gradlew` command, or `build:android` script.
 
 ## Debugging
 
+The best tactic for debugging is opening the `ios/` and `android/` workspaces in their respective editors. This allows to manage SDK versions, build scripts, and more hidden config.
+
 ### building
 
-Includied are 2 scripts `build:ios` and `build:android`. These should come in handy when needing to build the respective deployments from scratch with all dependcies. ie. cocoa pods and respective android SDK via gradle
+Includied are 2 scripts `build:ios` and `build:android`. These can be used to manually build either targets without using caches.
 
 ### ruby
 
