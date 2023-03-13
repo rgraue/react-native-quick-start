@@ -42,9 +42,16 @@ _machine used for setup was an Intel macOS 13._
 
 1. [Android Studio](https://developer.android.com/studio?gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPI0glwG6Gh40hC0EgwaANvivEIBEnZLDJKRgO8DK_UKXZutyj-v2iIaAjLKEALw_wcB&gclsrc=aw.ds)
    - emulators and devices can also be deployed with the **Device Manager** of Android Studio.
-2. [JDK](https://www.oracle.com/java/technologies/downloads/)
+2. Android Tools
+
+   - Add the following lines to the necessary cli profile (i.e. `.zshrc`) to export required variables to `PATH`.
+     > `export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk`\
+     > `export PATH=$PATH:$ANDROID_SDK_ROOT/emulator`\
+     > `export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools`
+
+3. [JDK](https://www.oracle.com/java/technologies/downloads/)
    - A java development source is required to build for android.
-3. [Gradle](https://gradle.org/)
+4. [Gradle](https://gradle.org/)
    - If using adnroid studio **Gradle plugin will be installed automatically**. Gradle is used to build the source code for android. This can be done manually from within android studio, `gradlew` command, or `build:android` script.
 
 ## Debugging
