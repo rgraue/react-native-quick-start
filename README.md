@@ -4,7 +4,7 @@ _if macOS 13 and npm 9, please use `Node 18` [nvm](https://github.com/nvm-sh/nvm
 
 ## Running
 
-_If first time running app, run `npm run build:ios/android` to initally install and build dependencies._
+_If first time running app, run `npm run build:ios` or `npm run build:android` to initially install and build dependencies._
 
 ### ios
 
@@ -36,7 +36,7 @@ _machine used for setup was an Intel macOS 13._
      > `eval "$(rbenv init -)"`
 3. [cocoapods](https://cocoapods.org/)
    - Use `brew install cocoapods` to install if not already.
-   - cocoapods are used to manage dependcies and packages imported by react-native. pods can be built either by changing directory to `ios/` and running `pod install` or using the `build:ios` script.
+   - cocoapods are used to manage dependencies and packages imported by react-native. pods can be built either by changing directory to `ios/` and running `pod install` or using the `build:ios` script.
 
 ### Android
 
@@ -50,9 +50,10 @@ _machine used for setup was an Intel macOS 13._
      > `export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools`
 
 3. [JDK](https://www.oracle.com/java/technologies/downloads/)
-   - A java development source is required to build for android.
+   - A java development source is required to build for android. You'll need to select the SE Development Kit appropriate for your machine.
 4. [Gradle](https://gradle.org/)
-   - If using adnroid studio **Gradle plugin will be installed automatically**. Gradle is used to build the source code for android. This can be done manually from within android studio, `gradlew` command, or `build:android` script.
+   - If using android studio **Gradle plugin will be installed automatically**. Gradle is used to build the source code for android. This can be done manually from within android studio, `gradlew` command, or `build:android` script.
+   - note that in order for Gradle and other plugins to build properly, android studio should be opened at the android folder level of the project, not the src/ level
 
 ## Debugging
 
@@ -66,7 +67,7 @@ Includied are 2 scripts `build:ios` and `build:android`. These can be used to ma
 
 ruby is used to compile the ios version of the app, and has a defined version inside the project that comes default from react-native at `2.7.6`. Fixing mismatched ruby versions can be done two ways:
 
-- (**Not Recommended**) update `.rubby-version` to local version.
+- (**Not Recommended**) update `.ruby-version` to local version.
 - Use a [ruby version manager](https://github.com/rbenv/rbenv) to install and use a specified ruby version.
 
 > Does not use expo!!!
